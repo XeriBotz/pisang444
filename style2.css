@@ -1,0 +1,241 @@
+/* Reset CSS untuk menghilangkan margin/padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Gaya untuk header */
+.header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+/* Gaya untuk main content */
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Judul Daftar Pembelian */
+h2 {
+    font-size: 2rem;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Gaya untuk daftar produk keranjang */
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#cart-items li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#cart-items li .item-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#cart-items li .item-price {
+    font-size: 1.1rem;
+    color: #6a11cb;
+    font-weight: 600;
+}
+
+.remove-button {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #c9302c;
+}
+
+/* Gaya untuk total harga */
+#total-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 25px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInFromRight 1s ease-out;
+}
+
+/* Gaya untuk tombol */
+button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #2575fc;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d5bb8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Tombol untuk Lihat Developer */
+button + button {
+    background-color: #ff9800;
+    margin-top: 10px;
+}
+
+button + button:hover {
+    background-color: #fb8c00;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #cart-items li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cart-items li .item-name,
+    #cart-items li .item-price {
+        margin-bottom: 10px;
+    }
+
+    #total-price {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}

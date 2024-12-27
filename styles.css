@@ -1,0 +1,128 @@
+/* Reset standar untuk menghindari perbedaan antar browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya dasar untuk halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.25rem;
+}
+
+/* Animasi fade-in untuk header */
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Kontainer paket */
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+/* Kartu paket */
+.package-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover pada kartu paket */
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul pada kartu */
+.package-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Deskripsi pada kartu */
+.package-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Tombol pada kartu */
+.package-card button {
+    background-color: #4CAF50; /* Warna latar belakang hijau */
+    color: white;
+    border: none;
+    padding: 12px 30px; /* Menambah padding agar tombol lebih besar dan lebih oval */
+    border-radius: 50px; /* Mengubah border-radius menjadi lebih besar untuk membuat tombol oval */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efek hover pada tombol */
+.package-card button:hover {
+    background-color: #388E3C; /* Mengubah warna hijau saat hover menjadi lebih gelap */
+    transform: scale(1.05);
+}
+
+/* Animasi untuk paket kartu yang muncul satu per satu */
+.package-card:nth-child(odd) {
+    animation: slideInLeft 0.8s forwards;
+}
+
+.package-card:nth-child(even) {
+    animation: slideInRight 0.8s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

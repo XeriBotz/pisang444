@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket 10RB</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header class="header">
+    <h1>Paket 13RB</h1>
+    <a href="keranjang.html" class="cart-button">🛒</a>
+</header>
+<main class="product-list">
+    <div class="product-card">
+        <h3>Coklat + keju</h3>
+        <p>Rp. 13.000</p>
+        <button onclick="window.location.href='7.jpg'">Lihat Detail</button>
+        <button onclick="addToCart('Paket 13 rb', 'Coklat + Keju', 13000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product-card">
+        <h3>Tiramisu + Keju</h3>
+        <p>Rp. 13.000</p>
+<button onclick="window.location.href='8.jpg'">Lihat Detail</button>
+        <button onclick="addToCart('Paket 13 rb', 'Tiramisu + Meses', 13000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product-card">
+        <h3>Matcha + Keju</h3>
+        <p>Rp. 13.000</p>
+<button onclick="window.location.href='9.jpg'">Lihat Detail</button>
+        <button onclick="addToCart('Paket 13 rb', 'Matcha + Keju', 13000)">Tambah ke Keranjang</button>
+    </div>
+</main>
+        <!-- Notifikasi -->
+        <div class="notification" id="notification">Produk berhasil ditambahkan ke keranjang!</div>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
